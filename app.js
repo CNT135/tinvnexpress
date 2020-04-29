@@ -58,14 +58,24 @@ app.use((req, res, next) => {
     res.status(401).send('Authentication required.');
 });
 
-app.get('/allnews', (req, res) => {
+app.get('/sang', (req, res) => {
     generator(); //no need wait done and no need return anything
-    res.send('Vui lòng chờ trong giây lát. Đang thực hiện Điểm tin Cuối ngày!')
+    res.send('Đang thực hiện Điểm tin Sáng!')
 });
 
-app.get('/sports', (req, res) => {
+app.get('/trua', (req, res) => {
+    generator(); //no need wait done and no need return anything
+    res.send('Đang thực hiện Điểm tin Trưa!')
+});
+
+app.get('/toi', (req, res) => {
+    generator(); //no need wait done and no need return anything
+    res.send('Đang thực hiện Điểm tin Tối!')
+});
+
+app.get('/thethao', (req, res) => {
     generatorSports(); //no need wait done and no need return anything
-    res.send('Vui lòng chờ trong giây lát. Đang thực hiện Điểm tin Thể thao!')
+    res.send('Đang thực hiện Điểm tin Thể thao!')
 });
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
