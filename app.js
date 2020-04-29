@@ -8,7 +8,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-const generator = async () => {
+const generatorsang = async () => {
     let vnExpress = new VnExpress();
     let news = await vnExpress.get();
 
@@ -23,9 +23,44 @@ const generator = async () => {
     if (process.env.PAGE_ID) {
         facebook.postAsPage(process.env.PAGE_ID)
     }
-    facebook.postNews(images);
+    facebook.postNewsSang(images);
 };
 
+const generatortrua = async () => {
+    let vnExpress = new VnExpress();
+    let news = await vnExpress.get();
+
+    let createImage = new CreateImage();
+    let images = [];
+    for (const feed of news) {
+        images.push(await createImage.create(feed.img, feed.title, feed.description));
+    }
+
+    let facebook = new Facebook(process.env.ACCESS_TOKEN, process.env.GROUP_ID);
+
+    if (process.env.PAGE_ID) {
+        facebook.postAsPage(process.env.PAGE_ID)
+    }
+    facebook.postNewsTrua(images);
+};
+
+const generatortoi = async () => {
+    let vnExpress = new VnExpress();
+    let news = await vnExpress.get();
+
+    let createImage = new CreateImage();
+    let images = [];
+    for (const feed of news) {
+        images.push(await createImage.create(feed.img, feed.title, feed.description));
+    }
+
+    let facebook = new Facebook(process.env.ACCESS_TOKEN, process.env.GROUP_ID);
+
+    if (process.env.PAGE_ID) {
+        facebook.postAsPage(process.env.PAGE_ID)
+    }
+    facebook.postNewsToi(images);
+};
 
 const generatorSports = async () => {
     let vnExpress = new VnExpressSports();
