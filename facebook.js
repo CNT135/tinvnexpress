@@ -86,7 +86,6 @@ function Facebook(accessToken, groupId)
             method: 'POST',
             body: formPublish,
         });    
-        
         console.log(await response.json())
     };
         
@@ -111,14 +110,8 @@ function Facebook(accessToken, groupId)
             method: 'POST',
             body: formPublish,
         });        
-
         console.log(await response.json())
     };
-
-    this.test = async () => {
-        let lastImageId = await publishImage('https://source.unsplash.com/daily?girl', true);
-        console.log(lastImageId);
-    }
 }
 
 module.exports = Facebook;
