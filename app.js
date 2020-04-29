@@ -23,7 +23,7 @@ const generatorsang = async () => {
     if (process.env.PAGE_ID) {
         facebook.postAsPage(process.env.PAGE_ID)
     }
-    facebook.postNewsSang(images);
+    facebook.postNews(images);
 };
 
 const generatortrua = async () => {
@@ -41,7 +41,7 @@ const generatortrua = async () => {
     if (process.env.PAGE_ID) {
         facebook.postAsPage(process.env.PAGE_ID)
     }
-    facebook.postNewsTrua(images);
+    facebook.postNews(images);
 };
 
 const generatortoi = async () => {
@@ -59,7 +59,7 @@ const generatortoi = async () => {
     if (process.env.PAGE_ID) {
         facebook.postAsPage(process.env.PAGE_ID)
     }
-    facebook.postNewsToi(images);
+    facebook.postNews(images);
 };
 
 const generatorSports = async () => {
