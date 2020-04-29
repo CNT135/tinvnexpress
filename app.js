@@ -77,7 +77,7 @@ const generatorSports = async () => {
     if (process.env.PAGE_ID) {
         facebook.postAsPage(process.env.PAGE_ID)
     }
-    facebook.postNewsToi(images);
+    facebook.postNews(images);
 };
 
 app.use((req, res, next) => {
