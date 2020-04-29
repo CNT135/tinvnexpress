@@ -8,25 +8,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-const generatorsang = async () => {
-    let vnExpress = new VnExpress();
-    let news = await vnExpress.get();
-
-    let createImage = new CreateImage();
-    let images = [];
-    for (const feed of news) {
-        images.push(await createImage.create(feed.img, feed.title, feed.description));
-    }
-
-    let facebook = new Facebook(process.env.ACCESS_TOKEN, process.env.GROUP_ID);
-
-    if (process.env.PAGE_ID) {
-        facebook.postAsPage(process.env.PAGE_ID)
-    }
-    facebook.postNewsSang(images);
-};
-
-const generatortrua = async () => {
+const generator = async () => {
     let vnExpress = new VnExpress();
     let news = await vnExpress.get();
 
@@ -44,23 +26,6 @@ const generatortrua = async () => {
     facebook.postNews(images);
 };
 
-const generatortoi = async () => {
-    let vnExpress = new VnExpress();
-    let news = await vnExpress.get();
-
-    let createImage = new CreateImage();
-    let images = [];
-    for (const feed of news) {
-        images.push(await createImage.create(feed.img, feed.title, feed.description));
-    }
-
-    let facebook = new Facebook(process.env.ACCESS_TOKEN, process.env.GROUP_ID);
-
-    if (process.env.PAGE_ID) {
-        facebook.postAsPage(process.env.PAGE_ID)
-    }
-    facebook.postNewsTrua(images);
-};
 
 const generatorSports = async () => {
     let vnExpress = new VnExpressSports();
@@ -95,18 +60,8 @@ app.use((req, res, next) => {
 });
 
 app.get('/sang', (req, res) => {
-    generatorsang(); //no need wait done and no need return anything
+    generator(); //no need wait done and no need return anything
     res.send('Đang thực hiện Điểm tin Sáng!')
-});
-
-app.get('/trua', (req, res) => {
-    generatortrua(); //no need wait done and no need return anything
-    res.send('Đang thực hiện Điểm tin Trưa!')
-});
-
-app.get('/toi', (req, res) => {
-    generatortoi(); //no need wait done and no need return anything
-    res.send('Đang thực hiện Điểm tin Tối!')
 });
 
 app.get('/thethao', (req, res) => {
