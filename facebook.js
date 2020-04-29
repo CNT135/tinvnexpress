@@ -41,7 +41,53 @@ function Facebook(accessToken, groupId)
         return response.id;
     };
 
-    this.postNews = async(images) => {
+    this.postNewsSang = async(images) => {
+        let formPublish = new FormData();
+        let date = moment().format('LL').toUpperCase();
+        formPublish.append('message',
+            `ĐIỂM TIN SÁNG - ${date}\n` +
+            '________________________________________\n' +
+            '* Nguồn tin: Báo điện tử VnExpress\n' +
+            '* Bài viết được đăng tự động lúc 6 giờ hàng ngày\n');
+        formPublish.append('formatting', 'MARKDOWN');
+
+        for (let i = 0; i < images.length ; i++) {
+            let responseId = await publishImage(images[i]);
+            formPublish.append(`attached_media[${i}]`, `{"media_fbid":"${responseId}"}`);
+        }
+        // let lastImageId = await publishImage('https://source.unsplash.com/daily?girl', true);
+        // formPublish.append(`attached_media[${images.length}]`, `{"media_fbid":"${lastImageId}"}`);
+
+
+        let response = await fetch(`${facebookApiV6}/${groupId}/feed?access_token=`+accessToken, {
+            method: 'POST',
+            body: formPublish,
+        });
+    
+    this.postNewsTrua = async(images) => {
+        let formPublish = new FormData();
+        let date = moment().format('LL').toUpperCase();
+        formPublish.append('message',
+            `ĐIỂM TIN TRƯA - ${date}\n` +
+            '________________________________________\n' +
+            '* Nguồn tin: Báo điện tử VnExpress\n' +
+            '* Bài viết được đăng tự động lúc 12 giờ trưa hàng ngày\n');
+        formPublish.append('formatting', 'MARKDOWN');
+
+        for (let i = 0; i < images.length ; i++) {
+            let responseId = await publishImage(images[i]);
+            formPublish.append(`attached_media[${i}]`, `{"media_fbid":"${responseId}"}`);
+        }
+        // let lastImageId = await publishImage('https://source.unsplash.com/daily?girl', true);
+        // formPublish.append(`attached_media[${images.length}]`, `{"media_fbid":"${lastImageId}"}`);
+
+
+        let response = await fetch(`${facebookApiV6}/${groupId}/feed?access_token=`+accessToken, {
+            method: 'POST',
+            body: formPublish,
+        });    
+        
+    this.postNewsToi = async(images) => {
         let formPublish = new FormData();
         let date = moment().format('LL').toUpperCase();
         formPublish.append('message',
@@ -62,7 +108,7 @@ function Facebook(accessToken, groupId)
         let response = await fetch(`${facebookApiV6}/${groupId}/feed?access_token=`+accessToken, {
             method: 'POST',
             body: formPublish,
-        });
+        });        
 
         console.log(await response.json())
     };
