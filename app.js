@@ -101,12 +101,12 @@ app.get('/sang', (req, res) => {
 
 app.get('/trua', (req, res) => {
     generatortrua(); //no need wait done and no need return anything
-    res.send('Đang thực hiện Điểm tin Sáng!')
+    res.send('Đang thực hiện Điểm tin Trưa!')
 });
 
 app.get('/toi', (req, res) => {
     generatortoi(); //no need wait done and no need return anything
-    res.send('Đang thực hiện Điểm tin Sáng!')
+    res.send('Đang thực hiện Điểm tin Cuối ngày!')
 });
 
 app.get('/thethao', (req, res) => {
