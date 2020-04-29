@@ -95,7 +95,17 @@ app.use((req, res, next) => {
 });
 
 app.get('/sang', (req, res) => {
-    generator(); //no need wait done and no need return anything
+    generatortoi(); //no need wait done and no need return anything
+    res.send('Đang thực hiện Điểm tin Sáng!')
+});
+
+app.get('/trua', (req, res) => {
+    generatortrua(); //no need wait done and no need return anything
+    res.send('Đang thực hiện Điểm tin Sáng!')
+});
+
+app.get('/toi', (req, res) => {
+    generatortoi(); //no need wait done and no need return anything
     res.send('Đang thực hiện Điểm tin Sáng!')
 });
 
