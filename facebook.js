@@ -46,7 +46,7 @@ function Facebook(accessToken, groupId)
         let date = moment().format('LL').toUpperCase();
         formPublish.append('message',
             `ĐIỂM TIN SÁNG - ${date}\n` +
-            '________________________________________\n' +
+            '_______________________________________\n' +
             '* Nguồn tin: Báo điện tử VnExpress\n' +
             '* Bài viết được đăng tự động lúc 6 giờ hàng ngày\n');
         formPublish.append('formatting', 'MARKDOWN');
