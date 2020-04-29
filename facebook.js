@@ -58,11 +58,12 @@ function Facebook(accessToken, groupId)
         // let lastImageId = await publishImage('https://source.unsplash.com/daily?girl', true);
         // formPublish.append(`attached_media[${images.length}]`, `{"media_fbid":"${lastImageId}"}`);
 
-
         let response = await fetch(`${facebookApiV6}/${groupId}/feed?access_token=`+accessToken, {
             method: 'POST',
             body: formPublish,
         });
+        console.log(await response.json())
+    };
     
     this.postNewsTrua = async(images) => {
         let formPublish = new FormData();
@@ -81,11 +82,13 @@ function Facebook(accessToken, groupId)
         // let lastImageId = await publishImage('https://source.unsplash.com/daily?girl', true);
         // formPublish.append(`attached_media[${images.length}]`, `{"media_fbid":"${lastImageId}"}`);
 
-
         let response = await fetch(`${facebookApiV6}/${groupId}/feed?access_token=`+accessToken, {
             method: 'POST',
             body: formPublish,
         });    
+        
+        console.log(await response.json())
+    };
         
     this.postNewsToi = async(images) => {
         let formPublish = new FormData();
@@ -103,7 +106,6 @@ function Facebook(accessToken, groupId)
         }
         // let lastImageId = await publishImage('https://source.unsplash.com/daily?girl', true);
         // formPublish.append(`attached_media[${images.length}]`, `{"media_fbid":"${lastImageId}"}`);
-
 
         let response = await fetch(`${facebookApiV6}/${groupId}/feed?access_token=`+accessToken, {
             method: 'POST',
