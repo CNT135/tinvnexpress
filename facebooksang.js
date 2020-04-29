@@ -73,4 +73,4 @@ function Facebook(accessToken, groupId)
     }
 }
 
-module.exports = Facebook;
+module.exports = Facebooksang;
