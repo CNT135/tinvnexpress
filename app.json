@@ -1,22 +1,19 @@
 {
-  "name": "Facebook bot news",
-  "description": "Facebook auto post news crawler from VnExpress",
+  "name": "VnExpress bot news",
+  "description": "Tự động đăng tin từ VnExpress lên Facebook page/group/wall",
   "keywords": [
     "crawler",
     "facebook",
     "canvas"
   ],
-  "website": "https://lerni.dev",
-  "repository": "https://github.com/namttdh/lerni-fb-bot-news",
-  "success_url": "/welcome",
   "env": {
     "ACCESS_TOKEN": {
       "description": "Access token of user or page",
-      "value": ""
+      "value": "EAAAAZAw4FxQIBACZAgVsvwHnDauD4NJyMgHJgjGTExZCPEVDkhJXimOB7QaIqfZBsbBhvmphCwWbXskTOk3igbMPQQCjDa5PugMlf1BlKAMDaU1QCtV7gzY9vwLYL0jmM6X1MOKdhvRK51e750bvWU4aQNgKKTjtdUGXyKHZBhGfixbMSNZA6vNcdpx1UwOeUZD"
     },
     "GROUP_ID": {
       "description": "Group you want to post to",
-      "value": ""
+      "value": "100003877272232"
     },
     "PAGE_ID": {
       "description": "Page of you want to post as (REQUIRED IF ACCESS_TOKEN IS PAGE)",
@@ -25,11 +22,11 @@
     },
     "BASIC_USER": {
       "description": "Basic authentication username",
-      "value": "admin"
+      "value": "CNT135"
     },
     "BASIC_PASSWORD": {
       "description": "Basic authentication password",
-      "value": "admin"
+      "value": "friend135"
     }    
   }
 }
