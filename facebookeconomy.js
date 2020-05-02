@@ -45,7 +45,7 @@ function FacebookEconomy(accessToken, groupId)
         let formPublish = new FormData();
         let date = moment().format('LL').toUpperCase();
         formPublish.append('message',
-            `BẢN TIN TÀI CHÍNH KINH DOANH\n     NGÀY ${date}\n` +
+            `BẢN TIN TÀI CHÍNH KINH DOANH\n    NGÀY ${date}\n` +
             '___________________________________\n' +
             '* Nguồn tin: Báo điện tử VnExpress\n');
         formPublish.append('formatting', 'MARKDOWN');
