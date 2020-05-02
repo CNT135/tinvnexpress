@@ -46,7 +46,7 @@ function Facebook(accessToken, groupId)
         let date = moment().format('LL').toUpperCase();
         formPublish.append('message',
             `ĐIỂM TIN SÁNG - ${date}\n` +
-            '_________________________________\n' +
+            '____________________________________\n' +
             '* Nguồn tin: Báo điện tử VnExpress\n');
         formPublish.append('formatting', 'MARKDOWN');
 
@@ -69,7 +69,7 @@ function Facebook(accessToken, groupId)
         let date = moment().format('LL').toUpperCase();
         formPublish.append('message',
             `ĐIỂM TIN TRƯA - ${date}\n` +
-            '_________________________________\n' +
+            '____________________________________\n' +
             '* Nguồn tin: Báo điện tử VnExpress\n');
         formPublish.append('formatting', 'MARKDOWN');
 
