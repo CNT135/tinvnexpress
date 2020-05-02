@@ -46,9 +46,8 @@ function FacebookSports(accessToken, groupId)
         let date = moment().format('LL').toUpperCase();
         formPublish.append('message',
             `ĐIỂM TIN THỂ THAO - ${date}\n` +
-            '____________________________________________\n' +
-            '* Nguồn tin: Báo điện tử VnExpress\n' +
-            '* Bài viết được đăng tự động lúc 7 giờ sáng hàng ngày\n');
+            '____________________________________\n' +
+            '* Nguồn tin: Báo điện tử VnExpress\n');
         formPublish.append('formatting', 'MARKDOWN');
 
         for (let i = 0; i < images.length ; i++) {
