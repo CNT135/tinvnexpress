@@ -46,9 +46,8 @@ function Facebook(accessToken, groupId)
         let date = moment().format('LL').toUpperCase();
         formPublish.append('message',
             `ĐIỂM TIN SÁNG - ${date}\n` +
-            '_______________________________________\n' +
-            '* Nguồn tin: Báo điện tử VnExpress\n' +
-            '* Bài viết được đăng tự động lúc 6 giờ hàng ngày\n');
+            '_________________________________\n' +
+            '* Nguồn tin: Báo điện tử VnExpress\n');
         formPublish.append('formatting', 'MARKDOWN');
 
         for (let i = 0; i < images.length ; i++) {
@@ -70,9 +69,8 @@ function Facebook(accessToken, groupId)
         let date = moment().format('LL').toUpperCase();
         formPublish.append('message',
             `ĐIỂM TIN TRƯA - ${date}\n` +
-            '________________________________________\n' +
-            '* Nguồn tin: Báo điện tử VnExpress\n' +
-            '* Bài viết được đăng tự động lúc 12 giờ trưa hàng ngày\n');
+            '_________________________________\n' +
+            '* Nguồn tin: Báo điện tử VnExpress\n');
         formPublish.append('formatting', 'MARKDOWN');
 
         for (let i = 0; i < images.length ; i++) {
@@ -94,9 +92,8 @@ function Facebook(accessToken, groupId)
         let date = moment().format('LL').toUpperCase();
         formPublish.append('message',
             `ĐIỂM TIN CUỐI NGÀY - ${date}\n` +
-            '________________________________________\n' +
-            '* Nguồn tin: Báo điện tử VnExpress\n' +
-            '* Bài viết được đăng tự động lúc 22 giờ hàng ngày\n');
+            '____________________________________\n' +
+            '* Nguồn tin: Báo điện tử VnExpress\n');
         formPublish.append('formatting', 'MARKDOWN');
 
         for (let i = 0; i < images.length ; i++) {
