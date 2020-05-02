@@ -114,6 +114,11 @@ app.use((req, res, next) => {
     res.status(401).send('Authentication required.');
 });
 
+app.get('/', (req, res) => {
+    generatorsang(); //no need wait done and no need return anything
+    res.send('ĐÃ CÀI ĐẶT THÀNH CÔNG. CHÚC MỪNG BẠN!')
+});
+
 app.get('/sang', (req, res) => {
     generatorsang(); //no need wait done and no need return anything
     res.send('Đang thực hiện ĐIỂM TIN SÁNG!')
