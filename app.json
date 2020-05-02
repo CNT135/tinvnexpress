@@ -9,11 +9,11 @@
   "env": {
     "ACCESS_TOKEN": {
       "description": "Access token of user or page",
-      "value": "EAAAAZAw4FxQIBABRhrJa6i3uZCKp1ZATf8zEZBhdGxkTAAZAsOPGdZC0q98BHJEeKo4D61z78PJAZAkRDqG8ZA6OJpgDV1rzrVTv8YmALsAK0ndqwbgb30lMZA2DlZAvC9YD1SyZCrhT46JUeApMaStJHtgKP31LZB55DRUjD4rPCOR0SF7s57KNeTcilJ61XN0uv6gZD"
+      "value": "EAAA"
     },
     "GROUP_ID": {
       "description": "Group you want to post to",
-      "value": "100003877272232"
+      "value": ""
     },
     "PAGE_ID": {
       "description": "Page of you want to post as (REQUIRED IF ACCESS_TOKEN IS PAGE)",
@@ -22,11 +22,11 @@
     },
     "BASIC_USER": {
       "description": "Basic authentication username",
-      "value": "CNT135"
+      "value": "admin"
     },
     "BASIC_PASSWORD": {
       "description": "Basic authentication password",
-      "value": "friend135"
+      "value": "admin"
     }    
   }
 }
