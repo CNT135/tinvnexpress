@@ -9,7 +9,7 @@
   "env": {
     "ACCESS_TOKEN": {
       "description": "Access token of user or page",
-      "value": "EAAAAZAw4FxQIBACZAgVsvwHnDauD4NJyMgHJgjGTExZCPEVDkhJXimOB7QaIqfZBsbBhvmphCwWbXskTOk3igbMPQQCjDa5PugMlf1BlKAMDaU1QCtV7gzY9vwLYL0jmM6X1MOKdhvRK51e750bvWU4aQNgKKTjtdUGXyKHZBhGfixbMSNZA6vNcdpx1UwOeUZD"
+      "value": "EAAAAZAw4FxQIBABRhrJa6i3uZCKp1ZATf8zEZBhdGxkTAAZAsOPGdZC0q98BHJEeKo4D61z78PJAZAkRDqG8ZA6OJpgDV1rzrVTv8YmALsAK0ndqwbgb30lMZA2DlZAvC9YD1SyZCrhT46JUeApMaStJHtgKP31LZB55DRUjD4rPCOR0SF7s57KNeTcilJ61XN0uv6gZD"
     },
     "GROUP_ID": {
       "description": "Group you want to post to",
